@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { ZoomrxTicketService } from 'src/app/services/zoomrx-ticket/zoomrx-ticket.service';
+import { ZoomrxTicketService } from '../../services/zoomrx-ticket/zoomrx-ticket.service';
 import { ActivatedRouteStub } from 'src/testing/activated-route-stub';
 
 import { ZoomrxCreateEditCardComponent } from './zoomrx-create-edit-card.component';

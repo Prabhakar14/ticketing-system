@@ -4,8 +4,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { CommentModel, TicketModel } from 'src/app/interfaces/status-column-and-ticket.interface';
-import { ZoomrxTicketService } from 'src/app/services/zoomrx-ticket/zoomrx-ticket.service';
+import { CommentModel, TicketModel } from '../../interfaces/status-column-and-ticket.interface';
+import { ZoomrxTicketService } from '../../services/zoomrx-ticket/zoomrx-ticket.service';
 
 interface TicketFromValueModel {
   title: string;

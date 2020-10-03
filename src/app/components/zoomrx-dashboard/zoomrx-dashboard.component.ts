@@ -3,8 +3,8 @@ import { FormControl, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
-import { ZoomrxDashboardService } from 'src/app/services/zoomrx-dashboard/zoomrx-dashboard.service';
-import { StatusColumnModel, TicketModel } from 'src/app/interfaces/status-column-and-ticket.interface';
+import { ZoomrxDashboardService } from '../../services/zoomrx-dashboard/zoomrx-dashboard.service';
+import { StatusColumnModel, TicketModel } from '../../interfaces/status-column-and-ticket.interface';
 import { Router } from '@angular/router';
 
 @Component({

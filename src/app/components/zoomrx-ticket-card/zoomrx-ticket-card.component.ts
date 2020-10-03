@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TicketModel } from 'src/app/interfaces/status-column-and-ticket.interface';
+import { TicketModel } from '../../interfaces/status-column-and-ticket.interface';
 
 @Component({
   selector: 'zoomrx-ticket-card',

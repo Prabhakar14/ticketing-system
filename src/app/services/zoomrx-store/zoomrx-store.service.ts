@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CommentModel, StatusColumnModel, TicketModel } from 'src/app/interfaces/status-column-and-ticket.interface';
+import { CommentModel, StatusColumnModel, TicketModel } from '../../interfaces/status-column-and-ticket.interface';
 
 @Injectable({
   providedIn: 'root'

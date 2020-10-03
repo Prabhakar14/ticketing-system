@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { ZoomrxDashboardService } from 'src/app/services/zoomrx-dashboard/zoomrx-dashboard.service';
+import { ZoomrxDashboardService } from '../../services/zoomrx-dashboard/zoomrx-dashboard.service';
 
 import { ZoomrxDashboardComponent } from './zoomrx-dashboard.component';
 

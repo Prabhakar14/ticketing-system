@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { StatusColumnModel } from 'src/app/interfaces/status-column-and-ticket.interface';
+import { StatusColumnModel } from '../../interfaces/status-column-and-ticket.interface';
 import { ZoomrxStoreService } from '../zoomrx-store/zoomrx-store.service';
 
 @Injectable()
