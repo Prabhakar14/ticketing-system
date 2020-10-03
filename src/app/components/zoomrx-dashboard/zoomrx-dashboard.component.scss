@@ -1,0 +1,67 @@
+@import "../../../styles/variables";
+
+.zoomrx-dashboard-container {
+  min-height: 10rem;
+}
+
+.zoomrx-dashboard-grid-container {
+  display: grid;
+
+  .zoomrx-dashboard-grid-column {
+    background-color: $zoomrx-grid-column-background-color;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    cursor: move;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+
+    .zoomrx-dashboard-grid-column-header {
+      padding: 0.25rem 0 0.5rem 0.1rem;
+      color: $zoomrx-grid-column-header-color;
+      text-transform: uppercase;
+
+      .mat-icon-button {
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: normal;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.zoomrx-dashboard-grid-container-fit {
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+}
+
+.zoomrx-cards-list-container {
+  background-color: $background-color-general;
+  padding: 0.25rem;
+  min-height: 30rem;
+
+  .zoomrx-add-ticket-card {
+    margin-top: 1rem;
+    text-align: right;
+    color: $button-light-color;
+  }
+
+  .zoomrx-card-drag-drop-placeholder {
+    min-height: 30rem;
+    background: transparent;
+    overflow: hidden;
+
+    .zoomrx-ticket-card-container {
+      padding: 0.25rem;
+      color: $zommrx-card-text-color;
+      cursor: move;
+    }
+  }
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

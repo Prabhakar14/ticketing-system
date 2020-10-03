@@ -1,0 +1,47 @@
+@import "../../../styles/variables";
+
+::ng-deep {
+  .zoorx-from-field {
+    .mat-form-field-outline {
+      background-color: $background-color-general;
+    }
+
+    .mat-form-field-infix {
+      width: auto;
+      min-width: 40rem;
+    }
+  }
+}
+
+.zoomrx-create-edit-ticket-container {
+  margin-top: 1rem;
+
+  .zoomrx-ticket-from-container {
+    width: 75%;
+    padding-left: 10%;
+  }
+
+  .zoomrx-comments-list {
+    width: 75%;
+    margin: 1rem 0;
+  }
+
+  .zoomrx-comment-text {
+    margin-top: 0.5rem;
+    max-width: 75%;
+  }
+}
+
+.zoomrx-ticket-action-container {
+  width: 23%;
+  text-align: left;
+  margin-top: 3rem;
+
+  .zoomrx-action-button {
+    margin: 0.5rem 0;
+
+    button {
+      min-width: 5rem;
+    }
+  }
+}

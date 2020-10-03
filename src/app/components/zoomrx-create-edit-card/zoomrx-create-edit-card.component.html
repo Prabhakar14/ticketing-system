@@ -1,0 +1,74 @@
+<div class="zoomrx-back-to-previous">
+  <button mat-flat-button (click)="locationService.back()">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_arrow_left</mat-icon>
+    <span>Back</span>
+  </button>
+</div>
+
+<ng-container *ngIf="componetStatus === 'loaded'; else errorTemplate">
+
+  <div class="zoomrx-create-edit-ticket-container zoomrx-space-between-container">
+  
+    <div class="zoomrx-ticket-from-container">
+  
+      <h2 class="zoomrx-page-title">{{ isEdit ? 'Update Ticket' : 'Create Ticket'}}</h2>
+  
+        <form class="zoomrx-form" [formGroup]="ticketFormGroup">
+    
+          <mat-form-field appearance="outline" class="zoorx-from-field">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Enter ticket title" formControlName="title">
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline" class="zoorx-from-field">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description" placeholder="Enter ticket description" rows="3"></textarea>
+          </mat-form-field>
+    
+        </form>
+    
+        <ng-container *ngIf="isEdit">
+      
+          <mat-form-field appearance="outline" class="zoorx-from-field">
+            <mat-label>Comment</mat-label>
+            <textarea matInput [formControl]="commentControl" placeholder="Enter comment" rows="8"></textarea>
+          </mat-form-field>
+      
+          <div class="zoomrx-action-button text-right">
+            <button mat-button (click)="commentControl.reset()">Cancel</button>
+            <button mat-stroked-button color="primary" [disabled]="commentControl.invalid" (click)="addComment()">Add</button>
+          </div>
+    
+        </ng-container>
+  
+        <div class="zoomrx-comments-list">
+          <ng-container *ngFor="let comment of ticket.comments">
+            <div class="zoomrx-space-between-container">
+              <div class="zoomrx-comment-text">{{ comment.commentText }}</div>
+              <div>{{ comment.date | date: 'medium' }}</div>
+            </div>
+          </ng-container>
+        </div>
+  
+    </div>
+  
+    <div class="zoomrx-ticket-action-container">
+      <div class="zoomrx-action-button">
+        <button mat-button (click)="resetForm()">Cancel</button>
+      </div>
+      <div class="zoomrx-action-button">
+        <button *ngIf="isEdit" mat-stroked-button color="warn" (click)="deleteTicket()">Delete</button>
+      </div>
+      <div class="zoomrx-action-button">
+        <button mat-stroked-button color="primary" [disabled]="ticketFormGroup.invalid || !isFormValueChanged" (click)="isEdit ? updateTicket() : createTicket()">{{ isEdit ? 'Update' : 'Create' }}</button>
+      </div>
+    </div>
+  
+  </div>
+  
+</ng-container>
+<ng-template #errorTemplate>
+
+  <h2>Something wrong!</h2>
+  
+</ng-template>

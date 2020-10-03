@@ -1,0 +1,49 @@
+.zoomrx-app-header-background {
+  background-color: $zoomrx-app-header-background-color;
+  box-shadow: 0 4px 12px 0 $zoomrx-app-header-box-shadow-color;
+}
+
+.zoomrx-space-between-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.zoomrx-main-container {
+  height: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  .zoomrx-back-to-previous {
+    padding: 0.5rem 0;
+    margin: 0 -0.5rem;
+    border-bottom: 1px solid $border-bottom-color-generel;
+  
+    button {
+      color: $button-light-color;
+    }
+  }
+
+  .zoomrx-page-title {
+    color: $zommrx-page-title-color;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
+}
+
+
+html {
+  height: 100%;
+
+  body {
+    background-image: url("../assets/images/bg_splash.png");
+    background-size: 80%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    height: 100%;
+    margin: 0;
+    transition-timing-function: ease;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+}

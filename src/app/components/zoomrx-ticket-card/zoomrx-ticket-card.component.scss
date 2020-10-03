@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+
+.zoomrx-ticket-card {
+  padding: 0.5rem;
+}
+
+::ng-deep {
+  .zoomrx-ticket-card {
+    .mat-card-header-text {
+      margin: 0;
+
+      .mat-card-title {
+        font-size: $zoomrx-card-title-font-size;
+        color: $zoomrx-card-title-color;
+      }
+    }
+  }
+}

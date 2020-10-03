@@ -1,0 +1,71 @@
+<div class="zoomrx-dashboard-container">
+
+  <h2 class="zoomrx-page-title">Task Manager App Sprint-1</h2>
+
+  <div cdkDropListGroup>
+
+    <div cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="statusColumnsData" (cdkDropListDropped)="onDropColumn($event)">
+
+      <div cdkDropListGroup class="zoomrx-dashboard-grid-container zoomrx-dashboard-grid-container-fit">
+
+        <div *ngFor="let statusColumn of statusColumnsData" class="zoomrx-dashboard-grid-column" cdkDrag>
+
+          <div>
+
+            <div class="zoomrx-dashboard-grid-column-header zoomrx-space-between-container">
+              <div>{{ statusColumn.name }} </div>
+              <div>
+                <button mat-icon-button matTooltip="Delete column from dashboard" aria-label="Delete column from dashboard" (click)="deleteColumn(statusColumn)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="zoomrx-cards-list-container">
+
+              <div cdkDropList [id]="statusColumn.statusId" [cdkDropListData]="statusColumn.tickets" class="zoomrx-card-drag-drop-placeholder" (cdkDropListDropped)="onDropCard($event)">
+
+                <div class="zoomrx-ticket-card-container" *ngFor="let ticket of statusColumn.tickets" cdkDrag>
+
+                  <zoomrx-ticket-card [ticketDetails]="ticket" (cardClick)="onCardClick($event)"></zoomrx-ticket-card>
+
+                </div>
+
+                <div class="zoomrx-add-ticket-card">
+                  <a mat-button [routerLink]="[ '/'+ statusColumn.statusId +'/create' ]">Create Ticket</a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="zoomrx-dashboard-grid-column">
+
+          <div class="zoomrx-dashboard-grid-column-header zoomrx-space-between-container">
+            <div *ngIf="isShowAddField">
+              <mat-form-field class="example-full-width">
+                <mat-label>Column name</mat-label>
+                <input matInput placeholder="Enter column name" [formControl]="newColumnNameControl">
+              </mat-form-field>
+              <button mat-button (click)="cencel()">Cancel</button>
+              <button mat-raised-button (click)="addColumn()" [disabled]="newColumnNameControl.invalid">Submit</button>
+            </div>
+
+            <div>
+              <button *ngIf="!isShowAddField" mat-stroked-button (click)="isShowAddField = true">Add New Column</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
