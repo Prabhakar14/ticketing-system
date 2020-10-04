@@ -15,12 +15,12 @@
   
         <form class="zoomrx-form" [formGroup]="ticketFormGroup">
     
-          <mat-form-field appearance="outline" class="zoorx-from-field">
+          <mat-form-field appearance="outline" class="zoomrx-form-field">
             <mat-label>Title</mat-label>
             <input matInput placeholder="Enter ticket title" formControlName="title">
           </mat-form-field>
     
-          <mat-form-field appearance="outline" class="zoorx-from-field">
+          <mat-form-field appearance="outline" class="zoomrx-form-field">
             <mat-label>Description</mat-label>
             <textarea matInput formControlName="description" placeholder="Enter ticket description" rows="3"></textarea>
           </mat-form-field>
@@ -29,7 +29,7 @@
     
         <ng-container *ngIf="isEdit">
       
-          <mat-form-field appearance="outline" class="zoorx-from-field">
+          <mat-form-field appearance="outline" class="zoomrx-form-field">
             <mat-label>Comment</mat-label>
             <textarea matInput [formControl]="commentControl" placeholder="Enter comment" rows="8"></textarea>
           </mat-form-field>

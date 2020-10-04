@@ -2,7 +2,7 @@
 
   <h2 class="zoomrx-page-title">Task Manager App Sprint-1</h2>
 
-  <div cdkDropListGroup>
+  <div cdkDropListGroup class="zoomrx-dashboard-main-list-group">
 
     <div cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="statusColumnsData" (cdkDropListDropped)="onDropColumn($event)">
 
@@ -47,7 +47,7 @@
 
           <div class="zoomrx-dashboard-grid-column-header zoomrx-space-between-container">
             <div *ngIf="isShowAddField">
-              <mat-form-field class="example-full-width">
+              <mat-form-field class="zoomrx-form-field">
                 <mat-label>Column name</mat-label>
                 <input matInput placeholder="Enter column name" [formControl]="newColumnNameControl">
               </mat-form-field>
@@ -56,7 +56,7 @@
             </div>
 
             <div>
-              <button *ngIf="!isShowAddField" mat-stroked-button (click)="isShowAddField = true">Add New Column</button>
+              <button *ngIf="!isShowAddField" mat-stroked-button (click)="isShowAddField = true">Add Column</button>
             </div>
           </div>
 

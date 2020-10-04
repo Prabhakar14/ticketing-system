@@ -32,6 +32,24 @@
   }
 }
 
+.zoomrx-form {
+  .mat-form-field {
+    display: block;
+
+    .mat-form-field-infix {
+      width: auto;
+    }
+  }
+}
+
+.zoomrx-form-field.mat-form-field {
+  display: block;
+
+  .mat-form-field-infix {
+    width: auto;
+  }
+}
+
 
 html {
   height: 100%;
